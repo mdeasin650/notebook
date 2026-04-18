@@ -1,0 +1,23 @@
+{
+  "overview": "A personal notebook app where you can create, edit, search, and tag notes. Notes auto-save, are organized by last modified, and are private to each logged-in user.",
+  "features": [
+    "Create and edit notes with rich text formatting",
+    "Auto-save after inactivity",
+    "Full-text search across all notes",
+    "Tag notes and filter by tag",
+    "Internet Identity login — each user sees only their own notes",
+    "Delete notes with confirmation",
+    "Chronological note list with previews and timestamps"
+  ],
+  "category": "productivity",
+  "tags": [
+    "notes",
+    "notebook",
+    "productivity",
+    "rich-text",
+    "tags",
+    "search",
+    "personal"
+  ],
+  "last_updated": "2026-04-18T03:48:37.192Z"
+}

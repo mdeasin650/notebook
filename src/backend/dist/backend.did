@@ -1,0 +1,25 @@
+type NoteInput = 
+ record {
+   body: text;
+   tags: vec text;
+   title: text;
+ };
+type NoteId = nat;
+type Note = 
+ record {
+   body: text;
+   createdAt: int;
+   id: NoteId;
+   owner: principal;
+   tags: vec text;
+   title: text;
+   updatedAt: int;
+ };
+service : {
+  createNote: (input: NoteInput) -> (Note);
+  deleteNote: (id: NoteId) -> ();
+  getNote: (id: NoteId) -> (opt Note) query;
+  listNotes: () -> (vec Note) query;
+  searchNotes: (term: text) -> (vec Note) query;
+  updateNote: (id: NoteId, input: NoteInput) -> (Note);
+}

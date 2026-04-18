@@ -1,0 +1,123 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-display: Lora;
+    --font-body: Nunito;
+    --font-mono: "JetBrains Mono";
+    --radius: 0.5rem;
+
+    --background: 0.98 0.01 60;
+    --foreground: 0.2 0.02 60;
+    --card: 0.99 0.01 60;
+    --card-foreground: 0.18 0.02 60;
+    --popover: 0.99 0.01 60;
+    --popover-foreground: 0.18 0.02 60;
+
+    --primary: 0.5 0.12 180;
+    --primary-foreground: 0.99 0 0;
+
+    --secondary: 0.92 0.02 60;
+    --secondary-foreground: 0.28 0.02 60;
+    --muted: 0.88 0.01 60;
+    --muted-foreground: 0.45 0.01 60;
+
+    --accent: 0.62 0.1 180;
+    --accent-foreground: 0.99 0 0;
+
+    --destructive: 0.55 0.22 25;
+    --destructive-foreground: 0.98 0 0;
+
+    --border: 0.92 0.01 60;
+    --input: 0.94 0.01 60;
+    --ring: 0.62 0.1 180;
+
+    --chart-1: 0.62 0.1 180;
+    --chart-2: 0.68 0.12 42;
+    --chart-3: 0.55 0.1 15;
+    --chart-4: 0.72 0.08 250;
+    --chart-5: 0.58 0.09 75;
+
+    --sidebar: 0.97 0.01 60;
+    --sidebar-foreground: 0.22 0.02 60;
+    --sidebar-primary: 0.5 0.12 180;
+    --sidebar-primary-foreground: 0.99 0 0;
+    --sidebar-accent: 0.92 0.01 60;
+    --sidebar-accent-foreground: 0.28 0.02 60;
+    --sidebar-border: 0.91 0.01 60;
+    --sidebar-ring: 0.62 0.1 180;
+  }
+
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+}
+
+@layer utilities {
+  @font-face {
+    font-family: "Lora";
+    src: url("/assets/fonts/Lora.woff2") format("woff2");
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Nunito";
+    src: url("/assets/fonts/Nunito.woff2") format("woff2");
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "JetBrains Mono";
+    src: url("/assets/fonts/JetBrainsMono.woff2") format("woff2");
+    font-display: swap;
+  }
+
+  .transition-smooth {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .text-display-lg {
+    @apply text-3xl font-display font-normal leading-tight tracking-tight;
+  }
+
+  .text-display-md {
+    @apply text-2xl font-display font-normal leading-snug tracking-tight;
+  }
+
+  .text-display-sm {
+    @apply text-xl font-display font-normal leading-snug tracking-normal;
+  }
+
+  .text-body-lg {
+    @apply text-base font-body leading-relaxed;
+  }
+
+  .text-body-sm {
+    @apply text-sm font-body leading-relaxed;
+  }
+
+  .text-muted-hint {
+    @apply text-xs font-body text-muted-foreground tracking-wide;
+  }
+
+  .tag-base {
+    @apply inline-flex items-center gap-1 px-2.5 py-1 rounded-sm bg-accent/10 text-accent border border-accent/20 text-xs font-medium;
+  }
+
+  .note-card {
+    @apply bg-card border border-border rounded-md p-4 hover:border-accent/40 hover:shadow-sm transition-smooth cursor-pointer;
+  }
+
+  .font-display {
+    font-family: var(--font-display), Georgia, serif;
+  }
+
+  .font-body {
+    font-family: var(--font-body), system-ui, sans-serif;
+  }
+}
